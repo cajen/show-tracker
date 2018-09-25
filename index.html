@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Collector Sign In</title>
+    <link rel="stylesheet" type="text/css" href="/style/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Rakkas|Roboto" rel="stylesheet">
+    <script src="scripts/crud.js"></script>
+    <script src="scripts/user.js"></script>
+</head>
+<body>
+    <header id="header-index" class="header">
+        <h1>The Show Collector</h1>
+        <h3>a place to track shows in SD</h3>
+    </header>
+    <div id="div-index" class="center">
+        <input id="input-index-email" type="email" name="email" placeholder="Email" title="email">
+        <br>
+        <input id="input-index-password" type="password" name="password" placeholder="Password" title="password">
+        <br>
+        <button id="button-index-signin" class="button" title="Sign in">Sign in</button>
+        <br>
+        <a href="#" id="a-index-forgot" title="forgot password">Forgot your password?</a>
+        <br>
+        <label id="label-index-create" ><button id="button-index-create" class="button" title="sign up">Sign up</button></label>
+    </div>
+    <div id="div-create-index" class="modal">
+            <h1 id="h1-0-index">Welcome!</h1>
+            <input id="input-first-index" class="modal-input-2" name="name" type="text" required="required" placeholder="first name">
+            <br>
+            <input id="input-last-index" class="modal-input-2" name="name" type="text" required="required" placeholder="last name">
+            <br>
+            <input id="input-email-index" class="modal-input-2" name="email" type="email" required="required" placeholder="email">
+            <br>
+            <input id="input-password-index" class="modal-input-2" name="password" type="password" required="required" placeholder="password">
+            <br><br><br>
+            <button id="button-createUser-index" class="button-submit-collection">Create account</button>
+            <button id="button-cancel-index" class="button-cancel">Cancel</button>
+    </div>
+</body>
+</html>

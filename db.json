@@ -1,0 +1,29 @@
+{
+  "shows": [
+    {
+      "id": 0,
+      "description": "n/a",
+      "priority": "high",
+      "name": "test",
+      "due": "2018-08-08",
+      "created": "2018-09-08",
+      "status": "open"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Christopher",
+      "lastName": "Jensen",
+      "email": "cajensen@ucsd.edu",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "firstName": "christopher",
+      "lastName": "jensen",
+      "email": "topher.jensen63@gmail.com",
+      "password": "123456789",
+      "id": 2
+    }
+  ]
+}

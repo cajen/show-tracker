@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>show collection</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Rakkas|Roboto" rel="stylesheet">
+</head>
+<body>
+    <main id="main-collection">
+        <table id="table-collection" class="center">
+            <tr id="tr-heading-collection">
+                <th id="th-0-collection" class="col-0 th-collection"></th>
+                <th id="th-1-collection" class="col-1 th-collection"><label>Artists</label></th>
+                <th id="th-2-collection" class="col-2 th-collection"><label>Genre</label></th>
+                <th id="th-3-collection" class="col-3 th-collection"><label>When</label></th>
+                <th id="th-4-collection" class="col-4 th-collection"><label>Where</label></th>
+                <th id="th-5-collection" class="col-5 th-collection"><label>Price</label></th>
+                <th id="th-6-collection" class="col-6 th-collection"><label>21+</label></th>
+            </tr>
+            <tr class="tr-body-collection">
+                    <td class="col-0"><button class="button">Info</button></td>
+                    <td class="td-body-collection col-1">The Bad Plus</td>
+                    <td class="td-body-collection col-2">Jazz</td>
+                    <td class="td-body-collection col-3">The Observatory</td>
+                    <td class="td-body-collection col-4 open">9-27-18</td>
+                    <td class="td-body-collection col-5">$40+</td>
+                    <td class="col-6">&#x2713</td>
+            </tr>
+            <template id="template-entry">
+                <tr class="tr-body-collection">
+                        <td class="col-0"></td>
+                        <td class="td-body-collection col-1"></td>
+                        <td class="td-body-collection col-2"></td>
+                        <td class="td-body-collection col-3"></td>
+                        <td class="td-body-collection col-4 open"></td>
+                        <td class="td-body-collection col-5"></td>
+                        <td class="col-6"><button class="button-delete">X</button></td>
+                </tr>
+            </template>
+            <template id="table-row-collection" class="table-row">
+                <tr><td><td><td></td></td></td></tr>
+            </template>
+        </table>
+        <button id="button-add-collection">+</button>
+    </main>
+    <div id="div-add-collection" class="modal">
+        <h1 id="h1-0-collection">Add to the collection</h1>
+        <input id="input-bug-collection" class="modal-input" name="bugName" type="text" required="required" placeholder="Artist name">
+        <br>
+        <input id="input-link-collection" class="modal-input" name="bugLink" type="url" placeholder="(Link to artist info) Ex: https://example.com">
+        <br>
+        <button>Add another artist</button>
+        <br>
+        <textarea id="input-description-collection" class="modal-input" name="bugDescription" type="text" required="required" placeholder="Description of show"></textarea>
+        <br>
+        <label id="label-0-collection">Date of show:</label>
+        <input id="input-date-due-collection" class="modal-input" name="showDate" type="date" required="required" placeholder="Due date">
+        <br>
+        <label id="label-2-collection">Time</label>
+        <input id="input-time-collection" name="showTime" type="time" required="required">
+        <br>
+        <label id="label-1-collection">Genre:</label>
+        <select id="select-priority-collection">
+                <option id="option-1-collection" value="rock">Rock</option>
+                <option id="option-2-collection" value="punk">Punk</option>
+                <option id="option-3-collection" value="metal">Metal</option>
+                <option id="option-4-collection" value="jazz">Jazz</option>
+                <option id="option-5-collection" value="classical">Classical</option>
+                <option id="option-6-collection" value="classical">Art exhibit</option>
+                <option id="option-7-collection" value="classical">Performance art</option>
+                <option id="option-8-collection" value="classical">Film</option>
+        </select>
+        <br>
+        <label id="label-3-collection">Price</label>
+        <input id="input-price-collection" type="number" placeholder="price">
+        <br>
+        <button class="button-submit-collection">Add</button>
+        <button id="button-cancel-collection" class="button-cancel">Cancel</button>
+    </div>
+</body>
+</html>
