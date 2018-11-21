@@ -7,9 +7,10 @@ window.onload = function () {
         let inputs = document.getElementById('div-create-index').getElementsByTagName('input');
 
         var firstName = inputs[0].value.toLowerCase();
-        var lastName = inputs[1].value.toLocaleLowerCase();
-        var userEmail = inputs[2].value.toLocaleLowerCase();
-        var userPassword = inputs[3].value;
+        var lastName = inputs[1].value.toLowerCase();
+        var userEmail = inputs[2].value.toLowerCase();
+        var userName = inputs[3].value;
+        var userPassword = inputs[4].value;
 
         if (firstName == '' || lastName == '') {
             this.alert('Please provide your full name.');
@@ -27,21 +28,29 @@ window.onload = function () {
                 "email": userEmail,
                 "password": userPassword
             }
-
-            let uURL = formatURLforItemByField('users', 'email', userEmail);
-
-            readCRUD(uURL).then(data => {
-                if (!Array.isArray(data) || !data.length) {
-                    console.log(data);
-                    createUser(user);
-                }
-                else {
-                    alert("A user with that email address already exists")
-                    console.log(data);
-                }
+            createUser(user).then(data => {
+                user.uid = data.name;
+                updateUser(data.name, 2,user);
+                console.log(data.name);
             }).catch(function (e) {
                 console.log(e);
             });
+            
+            // let uURL = formatURLforItemByField('users', '', userName);
+            // let uURL = formatURLforItemById('users', userName);
+
+            // readCRUD(uURL).then(data => {
+            //     if (!Array.isArray(data) || !data.length) {
+            //         console.log(data);
+            //         createUser(user);
+            //     }
+            //     else {
+            //         alert("A user with that user name already exists")
+            //         console.log(data);
+            //     }
+            // }).catch(function (e) {
+            //     console.log(e);
+            // });
         }
     });
 
@@ -65,13 +74,17 @@ window.onload = function () {
             let uURL = formatURLforItemByField('users', 'email', userEmail);
 
             readCRUD(uURL).then(data => {
-                if (!Array.isArray(data) || !data.length) {
+                if (typeof(data) != 'object' || data == {}) {
                     // console.log(data);
                     alert('no user account for this email exists');
                 }
                 else {
-                    if(userPassword == data[0].password){
-                        alert('welcome back ' + data[0].firstName);
+                    let k;
+                    for (var key in data) {
+                        k = key;
+                    };
+                    if(userPassword == data[k].password){
+                        alert('welcome back ' + data[k].firstName);
                         window.location = '/collection.html';
                     }
                     else {
